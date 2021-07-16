@@ -22,8 +22,8 @@ def downloadVideo():
     x=str(mylink.get())
     ytvideo=YouTube(x).streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
     if not os.path.exists('F:/letsupgrade'):
-        os.makedirs('F:/Letsupgrade')
-    ytvideo.download('F:/Letsupgrade') 
+        os.makedirs('F:/LetsUpgrade')
+    ytvideo.download('F:/LetsUpgrade') 
 
 Button(root,text="Download Video", width=20, bg='green',fg="white", command=downloadVideo).place(x=220, y=110)
 
